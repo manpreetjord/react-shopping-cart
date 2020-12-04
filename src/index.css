@@ -18,6 +18,13 @@ textarea {
   font-size: 1.6rem;
 }
 
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
 .grid-container {
   display: grid;
   grid-template-areas:
@@ -173,3 +180,24 @@ footer {
 .total > button {
   flex: 1;
 }
+
+/*Checkout-form*/
+
+.form-container{
+  list-style-type: none;
+  width: 100%;
+  padding: 0;
+
+}
+
+.form-container li{
+  display:flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+input{
+  padding:1rem;
+  border:0.1rem #c0c0c0 solid
+}
+

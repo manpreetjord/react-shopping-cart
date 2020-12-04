@@ -15,7 +15,9 @@ class App extends React.Component {
       sort: "",
     };
   }
-
+  createOrder = (order) => {
+    alert("Need to save order for" + order.name);
+  };
   removeFromCart = (product) => {
     const cartItems = this.state.cartItems.slice();
     this.setState({
@@ -83,7 +85,14 @@ class App extends React.Component {
     return (
       <div className="grid-container">
         <header>
-          <a href="/">React Shopping Cart</a>
+          <a href="/">
+            <img
+              className="logo"
+              src="https://d2tbpv2n5j8mo1.cloudfront.net/images/logo/jord-text-white.png"
+              alt="jords shop"
+              width="100px"
+            ></img>
+          </a>
         </header>
         <main>
           <div className="content">
@@ -104,6 +113,7 @@ class App extends React.Component {
               <Cart
                 cartItems={this.state.cartItems}
                 removeFromCart={this.removeFromCart}
+                createOrder={this.createOrder}
               />
             </div>
           </div>
